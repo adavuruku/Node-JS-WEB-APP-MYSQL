@@ -1,0 +1,60 @@
+extends postAdmin
+block user_Name
+	<span style="color:DodgerBlue"> #{author}</span>
+block content
+	if total_pages > 1
+		<div class="col-xs-12">
+			<ul class="pagination " align="center">
+				if has_previous_page == 1
+					<li> <a href="/staff/#{previous_page}">&laquo; </a></li>
+				each val in tot_p
+					if val == current_page
+						<li class="active"><span>#{val}<span class="sr-only">(current)</span></span></li>
+					if val != current_page
+						<li><a href="/staff/#{val}">#{val}</a></li>
+				if has_next_page == 1
+					<li> <a href="/staff/#{next_page}">&raquo; </a></li>
+			</ul>
+		</div>
+	
+	for sam in title
+		<div class="col-xs-12">
+			<div class="col-xs-3">
+					<img  style="height:180px" class="img-responsive img-thumbnail" src="/newsFile/#{sam.postId}/file.jpg" />
+			</div>
+			<div class="col-xs-9">
+				<h4 style="color:brown" ><strong>#{ sam.postType.toUpperCase()} : #{ sam.postTitle }</strong></h4>
+				<h5 style="color:blue"><strong><span style="color:green">Posted By : </span>#{ sam.author } </h5>
+				<h5><span style="color:green">Date Posted : </span>#{ sam.postDate}</strong></h5>
+				<p>#{ sam.postBody.slice(0,350)} <strong style="color:brown"><a style="color:white;padding:2px" class="btn btn-primary" href="/staff/read/#{ sam.postId }">Read News &raquo; </a></strong></p>
+				<p>
+					<strong style="color:brown">
+						<a style="color:white;padding:2px" class="btn btn-primary" href="/staff/read/#{ sam.postId }"><span class="glyphicon glyphicon-open"></span> View News <span class="glyphicon glyphicon-open"></span></a>
+					</strong> |
+					<strong style="color:brown">
+						<a style="color:white;padding:2px" class="btn btn-info" href="/staff/redit/#{ sam.postId }/"><span class="glyphicon glyphicon-pencil"></span> Edit News <span class="glyphicon glyphicon-pencil"></span></a>
+					</strong> |
+					<strong style="color:brown">
+						<a style="color:white;padding:2px" class="btn btn-danger" href="/staff/remove/#{ sam.postId }"><span class="glyphicon glyphicon-trash"></span> Delete News <span class="glyphicon glyphicon-trash"></span></a>
+					</strong>
+				</p>
+				<hr/>
+			</div>
+		</div>
+
+	if total_pages > 1
+		<div class="col-xs-12">
+			<ul class="pagination">
+				if has_previous_page == 1
+					<li> <a href="/staff/#{previous_page}">&laquo; </a></li>
+				each val in tot_p
+					if val == current_page
+						<li class="active"><span>#{val}<span class="sr-only">(current)</span></span></li>
+					if val != current_page
+						<li><a href="/staff/#{val}">#{val}</a></li>
+				if has_next_page == 1
+					<li> <a href="/staff/#{next_page}">&raquo; </a></li>
+			</ul>
+		</div>
+block navbar
+	include ./left_admin_nav.pug

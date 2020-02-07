@@ -1,0 +1,23 @@
+extends layout
+block topscrol
+	<h5 style="color:white;padding:10px" class="btn btn-primary">Viewing : #{category.toUpperCase()}</h5>
+block content
+	for sam in title
+		<div class="col-xs-12">
+			<h4 style="color:brown" ><strong>#{ sam.postType.toUpperCase()} : #{ sam.postTitle }</strong></h4>
+			<h5 style="color:blue"><strong><span style="color:green">Posted By : </span>#{ sam.author } </h5>
+			<h5><span style="color:green">Date Posted : </span>#{ sam.postDate}</strong></h5>
+			<hr/>
+			<img  style="height:300px" class="img-responsive img-thumbnail" src="/newsFile/#{sam.postId}/file.jpg" />
+		</div>
+		<div class="col-xs-12">
+			<hr/>
+			<p style="font-size:20px;">#{ sam.postBody }</p>
+			<hr/>
+		</div>
+block navbar
+	include ./left_nav.pug
+	
+	
+	
+	

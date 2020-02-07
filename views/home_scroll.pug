@@ -1,0 +1,53 @@
+<div class="hidden-xs col-sm-12 col-md-12 col-lg-12" style="background-color:white;margin-bottom:10px;margin-top:10px;padding:5px 5px 5px 5px">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-ride="carousel" style="background-color:white;padding:5px 0px 5px 0px;text-align:justify">
+		<!-- Carousel indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+		</ol>   
+		<div class="carousel-inner" style="background-color:white;">
+			for sam, index in topvalue
+				if index == 0
+					<div class="item active">
+						<a style="color:black;text-decoration:none;font-weight:bold;" href="/read/#{ sam.postId }/">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px;padding-bottom:5px">
+								<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" >
+									<img  style="height:180px" class="img-responsive img-thumbnail" src="./newsFile/#{sam.postId}/file.jpg" />
+								</div>
+								<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" >
+									<h4 style="color:brown" ><strong>#{ sam.postType.toUpperCase()} : #{ sam.postTitle }</strong></h4>
+									<h5 style="color:blue"><strong><span style="color:green">Posted By :</span>#{ sam.author }</strong></h5>
+									<h5 style="color:blue"><strong><span style="color:green">Date Posted : </span>#{ sam.postDate}</strong></h5>
+									<p>#{ sam.postBody.slice(0,150)}</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				else
+					<div class="item">
+						<a style="color:black;text-decoration:none;font-weight:bold;" href="/read/#{ sam.postId }/">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px;padding-bottom:5px">
+								<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" >
+									<img  style="height:180px" class="img-responsive img-thumbnail" src="./newsFile/#{sam.postId}/file.jpg" />
+								</div>
+								<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" >
+									<h4 style="color:brown" ><strong>#{ sam.postType.toUpperCase()} : #{ sam.postTitle }</strong></h4>
+									<h5 style="color:blue"><strong><span style="color:green">Posted By :</span>#{ sam.author }</strong></h5>
+									<h5 style="color:blue"><strong><span style="color:green">Date Posted : </span>#{ sam.postDate}</strong></h5>
+									<p>#{ sam.postBody.slice(0,150)}</p>
+								</div>
+							</div>
+						</a>
+					</div>
+		</div>
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev" >
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="carousel-control right" href="#myCarousel" data-slide="next" >
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+</div>

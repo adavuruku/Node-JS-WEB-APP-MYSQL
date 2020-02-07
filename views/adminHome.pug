@@ -1,0 +1,21 @@
+extends layout
+block content
+	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" >
+	</div>
+	<div style="padding:15px;" class="col-xs-12 col-sm-12 col-md-7 col-lg-7" >
+		<br/><br/><br/><br/>
+		<form style="background-color:Beige;padding:30px;" name = "form"  method="POST" class="form-horizontal" >
+			<div class="form-group">
+				<label for="inputUser">User Name</label>
+				<input type="text" class="form-control" id="inputUser" name="inputUser" placeholder="Enter User Name">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword">Password</label>
+				<input type="password" class="form-control" id="inputPassword" name="userP" placeholder="Enter Password">
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg">Click to Login</button>
+			<h4 style="color:brown;"><strong>#{ errorMesg }</strong></h4>
+		</form>
+	</div>
+block navbar
+	include ./left_nav.pug

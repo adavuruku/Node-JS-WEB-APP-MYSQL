@@ -1,0 +1,43 @@
+extends postAdmin
+block user_Name
+	<span style="color:DodgerBlue"> #{author}</span>
+block content
+	for sam in title
+		<div class="col-xs-12">
+			<div class="col-xs-3">
+					
+			</div>
+			<div class="col-xs-8">
+				<form style="background-color:Beige;padding:30px;" name = "form"  method="POST" encType="multipart/form-data"  class="form-horizontal" >
+					<h4 style="color:brown;"><strong>#{ errorMesg }</strong></h4>
+					<div class="form-group">
+						<label for="inputUser">Post Title :</label>
+						<input type="text" class="form-control" value="#{ sam.postTitle}" id="inputUser" name="postTitle" placeholder="Enter User Name">
+					</div>
+					<div class="form-group">
+						<label for="posttype">Post Type :</label>
+							<select class="form-control" name="postType" id="posttype" >
+								<option value="#{ sam.postType}">#{ sam.postType}</option>
+								<option value="Others">Others</option>
+								<option value="Politics">Politics</option>
+								<option value="Sports">Sports</option>
+							</select>
+					</div>
+					<div class="form-group">
+						<label for="newsFile">Post Picture : <span style="color:red">(jpg or jpeg - not morethan 100kb)<span style="color:red"></label>
+							<input type="file" required="true" name="newsFile" id="newsFile"></input>
+					</div>
+					<div class="form-group">
+						<label for="postdetails">Post Content :</label>
+							textarea(name="postBody",id="postBody", class="form-control", rows="30" ) #{ sam.postBody}
+					</div>
+					<button type="submit" class="btn btn-primary btn-lg">Click to Save Update</button>
+					<h4 style="color:brown;"><strong>#{ errorMesg }</strong></h4>
+				</form>
+			</div>
+			<div class="col-xs-1">
+					
+			</div>
+		</div>
+block navbar
+	include ./left_admin_nav.pug

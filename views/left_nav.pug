@@ -1,0 +1,38 @@
+<div style="padding:0px;background-color:Beige" class="col-xs-12">
+	<h4 style="color:yellow;background-color:grey;padding:10px" >Politics News </h4>
+	for pols in plolitics_r
+		<div style="padding:10px" class="col-xs-12">
+			<a style="text-decoration: none;color:brown" href="/read/#{ pols.postId }/">
+				<h5 style="color:brown" ><strong>#{ pols.postTitle }</strong></h5>
+				<p style="color:green">#{ pols.postDate}</p>
+			</a>
+			<hr/>
+		</div>
+	<h6 style="padding:10px"><strong><a  style="text-decoration: none;color:white;padding:5px" class="btn btn-primary pull-right"  href="/viewAll/Politics/1/">View All Politics News &raquo; </a></strong></h6>
+</div>
+
+<div style="padding:0px;background-color:Beige" class="col-xs-12">
+	<h4 style="color:yellow;background-color:grey;padding:10px" >Sports News </h4>
+	for spor in sports_r
+		<div style="padding:10px" class="col-xs-12">
+			<a style="text-decoration: none;color:brown" href="/read/#{ spor.postId }/">
+				<h5 style="color:brown" ><strong>#{ spor.postTitle }</strong></h5>
+				<p style="color:green">#{ spor.postDate}</p>
+			</a>
+			<hr/>
+		</div>
+	<h6 style="padding:10px"><strong><a  style="text-decoration: none;color:white;padding:5px" class="btn btn-primary pull-right"  href="/viewAll/Sports/1/">View All Sports News &raquo; </a></strong></h6>
+</div>
+
+<div style="padding:0px;background-color:Beige;padding-bottom:30px" class="col-xs-12">
+	<h4 style="color:yellow;background-color:grey;padding:10px" >Others News </h4>
+	for othe in others_r
+		<div style="padding:10px" class="col-xs-12">
+			<a style="text-decoration: none;color:brown" href="/read/#{ othe.postId }/">
+				<h5 style="color:brown" ><strong>#{ othe.postTitle }</strong></h5>
+				<p style="color:green">#{ othe.postDate}</p>
+			</a>
+			<hr/>
+		</div>
+	<h6 style="padding:5px"><strong><a  style="text-decoration: none;color:white;padding:5px" class="btn btn-primary pull-right" href="/viewAll/Others/1/">View All Other News &raquo; </a></strong></h6>
+</div>

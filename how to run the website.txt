@@ -1,0 +1,24 @@
+open command prompt
+	cd directory to c:\wamp\www\nodejsweb
+	
+	npm start 
+
+	or
+	
+	npm devstart
+
+
+go to the browser and type
+	127.0.0.1:3000/1
+
+
+different between npm start and devstart
+
+npm start - you will have to always restart the website anytime you make changes to ny of its file (scripts)
+
+but
+
+npm devastart - u will not have to restart the website manually but it does dat automatically anytime you save changes to any of its file..
+but you must have install nodemon using
+
+npm install --save-dev nodemon
